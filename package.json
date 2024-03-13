@@ -11,8 +11,7 @@
     "prisma": "^5.9.1"
   },
   "scripts": {
-    "start": "npx nodemon server.js",
-    "postinstall": "prisma generate"
+    "start": "npx nodemon server.js"
   },
   "name": "ecommerce-api",
   "version": "1.0.0",
