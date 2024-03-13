@@ -6,8 +6,9 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 model Product {
@@ -51,11 +52,11 @@ model CategoryProduct {
 }
 
 model Cart {
-  id         Int    @id @default(autoincrement())
+  id         Int      @id @default(autoincrement())
   user_id    Int
   quantity   Int?
   product_id Int?
-  total      Float? @db.Float
+  total      Decimal? @db.Decimal
 
   user User @relation(fields: [user_id], references: [id])
 
