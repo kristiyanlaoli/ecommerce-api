@@ -11,11 +11,11 @@
     "prisma": "^5.9.1"
   },
   "scripts": {
-    "start": "npx nodemon server.js"
+    "start": "npx nodemon api/index.js"
   },
   "name": "ecommerce-api",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "api/index.js",
   "keywords": [],
   "type": "module",
   "author": "",
