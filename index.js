@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.get("/api", (req, res) => {
   res.json({
-    message: "Welcome to our E-commerce API",
+    message: "Welcome to simple E-commerce API",
     status: "Under Development",
     purpose: "Learning to create an API",
     author: "Kristiyan Laoli",
