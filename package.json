@@ -10,12 +10,13 @@
   "devDependencies": {
     "prisma": "^5.9.1"
   },
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "name": "ecommerce-api",
   "version": "1.0.0",
-  "main": "index.js",
   "keywords": [],
   "type": "module",
   "author": "",
