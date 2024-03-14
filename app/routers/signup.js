@@ -10,7 +10,7 @@ const bcryptRound = Number(process.env.BCRYPT_ROUND);
 router.post("/signup", validateSignupTokenRequest, async (req, res) => {
   const role = await prisma.role.findUnique({
     where: {
-      name: "REGULAR_USER",
+      name: "regular_user",
     },
   });
 
@@ -21,7 +21,7 @@ router.post("/signup", validateSignupTokenRequest, async (req, res) => {
       email: req.body.email,
       password: hashedPassword,
       name: req.body.name,
-      role_id: role.id,
+      role_id: Number(role.id),
     },
   });
 

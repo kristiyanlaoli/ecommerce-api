@@ -7,7 +7,13 @@ const app = express();
 app.use(express.json());
 
 app.get("/api", (req, res) => {
-  res.json({ message: "Hello, welcome to ecommerce-api" });
+  res.json({
+    message: "Welcome to our E-commerce API",
+    status: "Under Development",
+    purpose: "Learning to create an API",
+    author: "Kristiyan Laoli",
+    note: "For more details about the endpoints, please refer to the README file.",
+  });
 });
 
 app.use((err, req, res, next) => {
